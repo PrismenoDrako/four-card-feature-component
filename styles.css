@@ -1,0 +1,139 @@
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body , main{
+    width: 100%;
+    min-height: 100vh;
+    font-size: 15px;
+}
+
+main{
+    padding: 6rem 2rem;
+    background-color: var(--very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1110px;
+    font-family: 'Poppins', sans-serif;
+    gap: 4rem;
+}
+
+.card--general{
+    text-align: center;
+    color: var(--very-dark-blue);
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.general-title{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.genertal-text{
+    color: var(--grayish-blue);
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.card--tools{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 350px) );
+    grid-auto-flow: dense;
+    gap: 2rem;
+}
+
+.tool-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.tool{
+    background-color: white;
+    border: none;
+    border-top: 4px solid;
+    padding: 2rem;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 0.8rem;
+    color: var(--grayish-blue);
+
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.tool--title{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--very-dark-blue);
+}
+
+.tool--desc{
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.tool--icon{
+    padding-top: 2rem;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.cyan{
+    border-color: var(--cyan);
+}
+
+.red{
+    border-color: var(--red);    
+}
+
+.orange{
+    border-color: var(--orange);
+}
+
+.blue{
+    border-color: var(--blue);
+}
+
+@media(min-width:1170px){
+    .card--tools{
+        display: grid;
+        width: 100%;
+    }
+    .general-title{
+        font-size: 2.5rem;
+    }
+}
